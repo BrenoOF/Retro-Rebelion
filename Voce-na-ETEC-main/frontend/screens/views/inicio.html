@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Rebelion</title>
+    <link rel="stylesheet" href="../../assets/css/inicio.css">
+    <link rel="stylesheet" href="../../assets/css/centralizar.css">
+    <link rel="icon" href="../../assets/img/logo.png">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <img draggable="false" src="../../assets/img/logo.png" class="logo">
+        </div>
+        <div>
+            <input type="text" name="nome" id="nome" placeholder="Digite um Nome...">
+        </div>
+
+        <div>
+            <button class="btn play" onclick="salvarNome()">
+                PLAY
+            </button>
+        </div>
+        <a href="rank.html" class="sla">
+            <button class="btn rank">
+                <img draggable="false" src="../../assets/img/rank-icon.svg" class="icon">
+            </button>
+        </a>
+    
+        </div>
+    </div>
+
+    <script>
+        function salvarNome() {
+            sessionStorage.setItem('playMusic', 'true')
+            var nome = document.getElementById('nome').value;
+            if(nome==""){ 
+                alert("Insira um nome no campo!");
+            }else{
+                sessionStorage.setItem('nome', nome);
+                window.location.href = "jogo.html";
+            }
+            
+        }
+    </script>
+</body>
+</html>

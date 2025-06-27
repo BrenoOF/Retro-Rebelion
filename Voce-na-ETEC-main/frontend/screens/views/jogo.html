@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Rebelion</title>
+    <link rel="stylesheet" href="../../assets/css/jogo.css">
+    <link rel="icon" href="../../assets/img/logo.png">
+    <script src="../controllers/jogo.js"></script>
+</head>
+<body>
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <div>
+        <div class="barra-vida">
+            <img src="../../assets/img/barra-vida.png" class="img-coracao" draggable="false">
+            <img src="../../assets/img/barra-vida.png" class="img-coracao" draggable="false">
+            <img src="../../assets/img/barra-vida.png" class="img-coracao" draggable="false">
+        </div>
+
+        <div class="temporizador">
+            <input type="text" id="timerInput" placeholder="00:00" disabled>
+            <span class="suma" id="add">+100</span>
+        </div>
+
+        <div class="pente-balas">
+            <img src="../../assets/img/bala-carregada.png" class="img-bala" draggable="false">
+            <img src="../../assets/img/bala-carregada.png" class="img-bala" draggable="false">
+            <img src="../../assets/img/bala-carregada.png" class="img-bala" draggable="false">
+            <img src="../../assets/img/bala-carregada.png" class="img-bala" draggable="false">
+            <img src="../../assets/img/bala-carregada.png" class="img-bala" draggable="false">
+        </div>
+
+        <div class="encaixar" id="nave-1">
+            <img src="../../assets/img/personagens_e_naves/personagem3.gif" class="suma inimigo-3" draggable="false">
+            <img src="../../assets/img/personagens_e_naves/nave-inimigo1.png" class="img-nave-inimigos" draggable="false">
+        </div>
+        <div class="encaixar" id="nave-2">
+            <img src="../../assets/img/personagens_e_naves/personagem1.gif" class="img-inimigos inimigo-1" draggable="false">
+            <img src="../../assets/img/personagens_e_naves/nave-inimigo2.png" class="img-nave-inimigos" draggable="false">
+        </div>
+        <div class="encaixar" id="nave-3">
+            <img src="../../assets/img/personagens_e_naves/personagem2.gif" class="suma inimigo-2" draggable="false">
+            <img src="../../assets/img/personagens_e_naves/nave-inimigo1.png" class="img-nave-inimigos" draggable="false">
+        </div>
+        <div class="encaixar" id="nave-4">
+            <img src="../../assets/img/personagens_e_naves/personagem3.gif" class="img-inimigos inimigo-3" draggable="false">
+            <img src="../../assets/img/personagens_e_naves/nave-inimigo2.png" class="img-nave-inimigos" draggable="false">
+        </div>
+        <div class="encaixar" id="nave-5">
+            <img src="../../assets/img/personagens_e_naves/personagem1.gif" class="suma inimigo-1" draggable="false">
+            <img src="../../assets/img/personagens_e_naves/nave-inimigo2.png" class="img-nave-inimigos" draggable="false">
+        </div>
+        <div class="encaixar" id="nave-6">
+            <img src="../../assets/img/personagens_e_naves/personagem2.gif" class="img-inimigos inimigo-2" draggable="false">
+            <img src="../../assets/img/personagens_e_naves/nave-inimigo1.png" class="img-nave-inimigos" draggable="false">
+        </div>
+
+        <div class="nave">
+            <img src="../../assets/img/jogador/nave-levantado.png" class="img-nave">
+        </div>
+        <div class="arma">
+            <img src="../../assets/img/jogador/arma normal.gif" class="img-arma">
+        </div>
+    </div>
+
+    <script>
+    document.body.addEventListener('click', function() {
+        const audio = new Audio('../../assets/vendor/songs/Battle.mp3');
+        audio.loop = true;
+        audio.play();
+        document.body.removeEventListener('click', arguments.callee);
+        iniciarTemporizador();
+    });
+    function removePreloader() {
+        const preloader = document.getElementById('preloader');
+        preloader.style.display = 'none';
+    }
+    window.addEventListener('load', function() {
+        removePreloader();
+    });
+    </script>
+</body>
+</html>

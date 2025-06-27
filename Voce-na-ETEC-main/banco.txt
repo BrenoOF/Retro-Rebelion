@@ -1,0 +1,15 @@
+create database jogo;
+
+create table jogo.ranking(
+	id int not null auto_increment,
+    pontuacao int default 0,
+    nome varchar(100) not null,
+    primary key (id)
+);
+
+create table jogo.ranking_temp(
+	id int not null auto_increment,
+    nome varchar(100) not null,
+    tempo time not null,
+    primary key (id)
+);

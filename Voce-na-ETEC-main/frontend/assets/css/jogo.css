@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    cursor: url('../../assets/img/jogador/mira.gif'), auto;
+}
+
+body{
+    user-select: none;
+    background-image: url("../img/Background.gif");
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* Estilo da Div da Barra de Vida */
+.barra-vida{
+    display: flex;
+    align-items: center;
+}
+.img-coracao{
+    margin: 0.5rem;
+    width: 4rem;
+    height: 3rem;
+}
+
+/* Estilo do Timer*/
+span{
+    color: #0dc5c5;
+    font-size: 1.4rem;
+}
+
+.temporizador{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+input[type="text"] {
+    width: 150px;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    text-align: center;
+    background-color: transparent;
+    color: #0dc5c5;
+    font-family: "Pixelify Sans", sans-serif;
+    border-bottom: 2px solid #0dc5c5;
+    border-right: 2px solid #0dc5c5;
+    border-left: 2px solid #0dc5c5;
+}
+
+input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+/* Estilo da Div das Balas */
+.pente-balas{
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+.img-bala{
+    width: 1rem;
+}
+
+/* Estilo do Inimigo */
+.encaixar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-inimigos{
+    margin-bottom: -2rem;
+    width: 12rem;
+}
+
+.img-nave-inimigos{
+    margin-left: 0.6rem;
+    width: 9rem;
+}
+
+#nave-1{
+    position: fixed;
+    top: 7rem;
+    left: 5rem;
+}
+#nave-2{
+    position: fixed;
+    bottom: 15rem;
+    left: 20rem;
+}
+#nave-3{
+    position: fixed;
+    top: 7rem;
+    left: 34rem;
+}
+#nave-4{
+    position: fixed;
+    bottom: 15rem;
+    right: 25rem;
+}
+#nave-5{
+    position: fixed;
+    top: 7rem;
+    right: 15rem;
+}
+#nave-6{
+    position: fixed;
+    bottom: 15rem;
+    right: 5rem;
+}
+
+/* Estilo da Nave do Jogador */
+.nave{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.img-nave{
+    width: 50%;
+}
+
+/* Estilo da Arma*/
+.arma{
+    position: fixed;
+    bottom: -0.1rem;
+    left: 26%;
+}
+.img-arma{
+    width: 50vw;
+    height: 50vh;
+}
+
+/* Some com qualquer coisa */
+.suma{
+    display: none;
+}
+
+/* Tela de Carregamento */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #fff;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 5s linear infinite;
+}
+
+/* Animação de rotação do loader */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.suma#add {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #fff;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.aparecer {
+    animation: apareceESome 2s ease-in-out forwards;
+}
+
+@keyframes apareceESome {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%);
+    }
+    25% {
+        opacity: 1;
+        transform: translate(-50%, -70%);
+    }
+    75% {
+        opacity: 1;
+        transform: translate(-50%, -70%);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -90%);
+    }
+}

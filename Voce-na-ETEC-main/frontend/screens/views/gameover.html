@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over</title>
+    <link rel="stylesheet" href="../../assets/css/gameover.css">
+    <link rel="stylesheet" href="../../assets/css/centralizar.css">
+    <link rel="icon" href="../../assets/img/logo.png">
+
+    <script src="../../assets/vendor/scripts/jquery-3.7.1.js"></script>
+    <script src="../controllers/controllerEnviar.js" defer></script>
+    
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                const btn = document.querySelector('.btn-voltar');
+                btn.classList.remove('some');
+                btn.classList.add('aparece');
+            }, 4000);
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img draggable="false" src="../../assets/img/gameover.gif" class="img-gameover">
+    </div>
+    <a href="./inicio.html">
+        <button class="btn-voltar some">
+            Voltar ao Inicio
+        </button>
+    </a>
+
+    <script>
+        const audio = new Audio('../../assets/vendor/songs/GameOver.mp3')
+        audio.play()
+    </script>
+</body>
+</html>

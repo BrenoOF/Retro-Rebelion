@@ -1,0 +1,51 @@
+body{
+    background-image: url("../img/background-rank.jpg");
+    background-size: cover;
+    background-color: #0d0c0f;
+    height: auto !important;
+}
+
+p{
+    margin: 1rem;
+}
+
+/* Botão de Voltar */
+.btn-voltar{
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ff00d0;
+    color: #fff;
+    border: #000 solid 2px;
+    padding: 1.2rem 2rem;
+    cursor: pointer;
+}
+
+.btn-voltar:hover{
+    background-color: #d80089;
+}
+
+/* Estilo da Tabela */  
+.tabela {
+    width: 30%;
+    margin-top: 1rem;
+    border-collapse: collapse;
+    background-color: #0d0c0fbb;
+    color: #fff;
+}
+th {
+    background-color: #0d0c0f;
+    color: #fff;
+}
+th, td {
+    padding: 1rem;
+    text-align: center;
+    border: #55ebff solid 2px;
+}
+
+/* Imagem Medalha */
+.img-medalha{
+    width: 2rem;
+}
