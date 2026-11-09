@@ -38,7 +38,7 @@ pipeline {
       }
     }
     stage('Instalar Wrangler') {
-      steps { sh 'npm ci' }
+      steps { sh 'npm install wrangler' }
     }
     stage('Planejar') {
       steps {
