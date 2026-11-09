@@ -84,7 +84,7 @@ pipeline {
             PROJETO=$(terraform output -raw nome_projeto)
             BRANCH=$(terraform output -raw branch_producao)
             ./node_modules/.bin/wrangler pages deploy site \
-              --project-name="$PROJETO" --branch="$BRANCH"
+              --project-name="$PROJETO" --branch="$BRANCH" --commit-dirty=true
           '''
         }
       }
