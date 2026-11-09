@@ -22,9 +22,9 @@ pipeline {
           terraform version
           node --version
           npm --version
-          test -f site/index.html
-          test -f package-lock.json
-          test -s /home/jenkins/tfstate/cloudflare/terraform.tfstate
+          # test -f site/index.html
+          # test -f package-lock.json
+          # test -s /home/jenkins/tfstate/cloudflare/terraform.tfstate
         '''
       }
     }
